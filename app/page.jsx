@@ -7,9 +7,11 @@ const Home = () => {
       <nav>
         <Navigation />
       </nav>
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <section id="header">
-          <h1>Jane's Birthday</h1>
+      <main>
+        <section id="header" className="h-screen flex flex-col justify-center">
+          <h1 className="text-[10vw] font-italiana text-white text-center">
+            Jane's Birthday
+          </h1>
           <Counter />
         </section>
       </main>

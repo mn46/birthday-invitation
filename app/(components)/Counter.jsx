@@ -45,7 +45,7 @@ const Counter = () => {
 
   return (
     isClient && (
-      <div>
+      <div className="font-purple-purse text-[7vw] text-center">
         {renderZero(days)}
         {days}:{renderZero(hours)}
         {hours}:{renderZero(minutes)}
