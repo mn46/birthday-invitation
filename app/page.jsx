@@ -61,6 +61,13 @@ const Home = () => {
             </li>
           </ul>
         </section>
+
+        <section id="contact" className="py-20 px-36">
+          <h2 className="text-center mb-10">Let me know if you're joining!</h2>
+          <p className="text-center">
+            Call or send a text to +45 12 34 56 78 until 01/11/2024
+          </p>
+        </section>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
     </div>
