@@ -6,6 +6,18 @@
   .nav-link {
     @apply uppercase text-lg font-semibold;
   }
+
+  h2 {
+    @apply text-8xl;
+  }
+
+  h3 {
+    @apply text-6xl;
+  }
+
+  p {
+    @apply text-lg;
+  }
 }
 
 .main-content {

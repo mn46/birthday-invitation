@@ -1,4 +1,5 @@
 import Counter from "./(components)/Counter";
+import DetailedInfoItem from "./(components)/DetailedInfoItem";
 import Navigation from "./(components)/Navigation";
 
 const Home = () => {
@@ -13,6 +14,10 @@ const Home = () => {
             Jane's Birthday
           </h1>
           <Counter />
+        </section>
+
+        <section id="details" className="bg-white py-20">
+          <DetailedInfoItem />
         </section>
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
