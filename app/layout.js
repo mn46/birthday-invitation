@@ -1,15 +1,28 @@
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "./globals.css";
+import { Italiana } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
+import { Purple_Purse } from "next/font/google";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const italiana = Italiana({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--italiana",
+  weight: ["400"],
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const instrument_sans = Instrument_Sans({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--instrument-sans",
+  weight: ["400", "500", "600", "700"],
+});
+
+const purple_purse = Purple_Purse({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--purple-purse",
+  weight: ["400"],
 });
 
 export const metadata = {
@@ -21,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${italiana.variable} ${instrument_sans.variable} ${purple_purse.variable} antialiased`}
       >
         {children}
       </body>

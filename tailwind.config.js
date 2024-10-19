@@ -12,6 +12,11 @@ module.exports = {
         text: "#625E58",
         inactive: "#D2CCC4",
       },
+      fontFamily: {
+        italiana: ["var(--italiana)"],
+        "instrument-sans": ["var(--instrument-sans)"],
+        "purple-purse": ["var(--purple-purse)"],
+      },
     },
   },
   plugins: [],
