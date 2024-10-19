@@ -8,15 +8,15 @@
   }
 
   h2 {
-    @apply text-8xl;
+    @apply text-8xl font-italiana;
   }
 
   h3 {
-    @apply text-6xl;
+    @apply text-5xl font-italiana;
   }
 
   p {
-    @apply text-lg;
+    @apply text-xl;
   }
 }
 
