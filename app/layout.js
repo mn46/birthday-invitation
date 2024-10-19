@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${italiana.variable} ${instrument_sans.variable} ${purple_purse.variable} antialiased`}
+        className={`${italiana.variable} ${instrument_sans.variable} ${purple_purse.variable} antialiased text-text`}
       >
         {children}
       </body>
