@@ -24,15 +24,15 @@ const Home = async () => {
       </nav>
       <main>
         <section id="header" className="h-screen flex flex-col justify-center">
-          <h1 className="text-[10vw] font-italiana text-white text-center">
+          <h1 className="text-[13vw] md:text-[10vw] font-italiana text-white text-center">
             Jane's Birthday
           </h1>
           <Counter />
         </section>
 
-        <section id="details" className="bg-white py-20 px-36">
+        <section id="details" className="bg-white py-20 px-10 md:px-36">
           <h2 className="text-center mb-20">Details</h2>
-          <div className="flex gap-10 mb-20">
+          <div className="flex flex-col lg:flex-row gap-10 mb-20">
             {details.map((detail) => (
               <DetailedInfoItem
                 key={detail.title}
@@ -45,39 +45,29 @@ const Home = async () => {
 
         <section
           id="plan"
-          className="bg-primary py-20 px-36 flex flex-col items-center"
+          className="bg-primary py-20 px-10 md:px-36 flex flex-col items-center"
         >
           <h2 className="text-center mb-20">Plan of the day</h2>
           <ul>
-            <li className="text-xl font-instrument-sans mb-4">
-              16:00 - the guests arrive
-            </li>
-            <li className="text-xl font-instrument-sans mb-4">
-              16:15 - coffee and snacks
-            </li>
-            <li className="text-xl font-instrument-sans mb-4">
+            <li className="plan-list-item">16:00 - the guests arrive</li>
+            <li className="plan-list-item">16:15 - coffee and snacks</li>
+            <li className="plan-list-item">
               16:45 - the birthday cake and a song
             </li>
-            <li className="text-xl font-instrument-sans mb-4">
-              17:15 - games and fun activities
-            </li>
-            <li className="text-xl font-instrument-sans mb-4">
-              18:00 - dinner
-            </li>
-            <li className="text-xl font-instrument-sans mb-4">
-              19:00 - games, drinks and snacks
-            </li>
+            <li className="plan-list-item">17:15 - games and fun activities</li>
+            <li className="plan-list-item">18:00 - dinner</li>
+            <li className="plan-list-item">19:00 - games, drinks and snacks</li>
           </ul>
         </section>
 
-        <section id="contact" className="py-20 px-36">
+        <section id="contact" className="py-20 px-10 md:px-36">
           <h2 className="text-center mb-10">Let me know if you're joining!</h2>
           <p className="text-center">
             Call or send a text to +45 12 34 56 78 until 01/12/2024
           </p>
         </section>
 
-        <section id="wishlist" className="bg-white py-20 px-36">
+        <section id="wishlist" className="bg-white py-20 px-10 md:px-36">
           <h2 className="text-center mb-10">Wishlist</h2>
           <div className="flex flex-wrap gap-10 justify-center">
             {wishlistData?.map((item) => (

@@ -8,15 +8,19 @@
   }
 
   h2 {
-    @apply text-8xl font-italiana;
+    @apply text-6xl md:text-8xl font-italiana;
   }
 
   h3 {
-    @apply text-5xl font-italiana;
+    @apply text-4xl md:text-5xl font-italiana;
   }
 
   p {
     @apply text-xl;
+  }
+
+  .plan-list-item {
+    @apply text-center lg:text-left text-xl font-instrument-sans mb-4;
   }
 }
 
