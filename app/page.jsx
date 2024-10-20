@@ -61,7 +61,9 @@ const Home = async () => {
         </section>
 
         <section id="contact" className="py-20 px-10 md:px-36">
-          <h2 className="text-center mb-10">Let me know if you're joining!</h2>
+          <h2 className="text-center mb-10">
+            Let me know if you&apos;re joining!
+          </h2>
           <p className="text-center">
             Call or send a text to +45 12 34 56 78 until 01/12/2024
           </p>
