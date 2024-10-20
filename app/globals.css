@@ -4,7 +4,7 @@
 
 @layer utilities {
   .nav-link {
-    @apply uppercase text-lg font-semibold;
+    @apply uppercase md:text-lg font-semibold text-right md:text-left;
   }
 
   h2 {
@@ -22,6 +22,10 @@
   .plan-list-item {
     @apply text-center lg:text-left text-xl font-instrument-sans mb-4;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .main-content {
