@@ -77,7 +77,17 @@ const Home = async () => {
         </section>
 
         <section id="wishlist" className="bg-white py-20 px-36">
-          <WishlistItem />
+          <h2 className="text-center mb-10">Wishlist</h2>
+          <div className="flex flex-wrap gap-10 justify-center">
+            {wishlistData?.map((item) => (
+              <WishlistItem
+                key={item.id}
+                giftName={item.gift_name}
+                reserved={item.reserved}
+                img={item.img}
+              />
+            ))}
+          </div>
         </section>
       </main>
       <footer className="h-20"></footer>
