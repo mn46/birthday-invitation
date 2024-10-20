@@ -1,13 +1,20 @@
 import Counter from "./(components)/Counter";
 import DetailedInfoItem from "./(components)/DetailedInfoItem";
 import Navigation from "./(components)/Navigation";
+import WishlistItem from "./(components)/WishlistItem";
+import { supabase } from "@/utils/supabase";
 
-const Home = () => {
+const Home = async () => {
   const details = [
     { title: "Day & Time", content: "16/11/2024 16:00" },
     { title: "Address", content: "24 Sunflower st., 1234 Flowertown" },
     { title: "Dresscode", content: "Casual and comfy" },
   ];
+
+  const { data: wishlistData, error } = await supabase
+    .from("wishlist")
+    .select();
+  console.log("wishlistData", wishlistData);
 
   return (
     <div className="main-content bg-center bg-cover bg-no-repeat">
@@ -65,11 +72,15 @@ const Home = () => {
         <section id="contact" className="py-20 px-36">
           <h2 className="text-center mb-10">Let me know if you're joining!</h2>
           <p className="text-center">
-            Call or send a text to +45 12 34 56 78 until 01/11/2024
+            Call or send a text to +45 12 34 56 78 until 01/12/2024
           </p>
         </section>
+
+        <section id="wishlist" className="bg-white py-20 px-36">
+          <WishlistItem />
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center"></footer>
+      <footer className="h-20"></footer>
     </div>
   );
 };
