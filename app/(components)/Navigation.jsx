@@ -13,7 +13,7 @@ const Navigation = () => {
         <a href="#contact">contact</a>
       </li>
       <li className="nav-link">
-        <Link href="/wishlist">wishlist</Link>
+        <a href="#wishlist">wishlist</a>
       </li>
     </ul>
   );
