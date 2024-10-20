@@ -1,3 +1,5 @@
+export const revalidate = 0;
+
 import Counter from "./(components)/Counter";
 import DetailedInfoItem from "./(components)/DetailedInfoItem";
 import Navigation from "./(components)/Navigation";
@@ -14,7 +16,6 @@ const Home = async () => {
   const { data: wishlistData, error } = await supabase
     .from("wishlist")
     .select();
-  console.log("wishlistData", wishlistData);
 
   return (
     <div className="main-content bg-center bg-cover bg-no-repeat">
@@ -82,11 +83,17 @@ const Home = async () => {
             {wishlistData?.map((item) => (
               <WishlistItem
                 key={item.id}
+                id={item.id}
                 giftName={item.gift_name}
                 reserved={item.reserved}
                 img={item.img}
               />
             ))}
+            {error && (
+              <p>
+                Something went wrong. Try refreshing the page or check it later.
+              </p>
+            )}
           </div>
         </section>
       </main>
