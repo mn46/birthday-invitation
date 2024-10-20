@@ -25,7 +25,7 @@ const Home = async () => {
       <main>
         <section id="header" className="h-screen flex flex-col justify-center">
           <h1 className="text-[13vw] md:text-[10vw] font-italiana text-white text-center">
-            Jane's Birthday
+            Jane&quot;s Birthday
           </h1>
           <Counter />
         </section>
