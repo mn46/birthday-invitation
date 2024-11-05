@@ -8,9 +8,13 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="pt-5 pr-5 flex flex-col items-end">
+    <div
+      className={`fixed flex flex-col items-end ${
+        isOpen ? "top-0 left-0 md:top-8 md:right-5" : "top-8 right-8"
+      }`}
+    >
       <button
-        className="md:hidden flex flex-col items-end"
+        className={`md:hidden flex flex-col items-end ${isOpen && "hidden"}`}
         onClick={() => setIsOpen((prev) => !prev)}
       >
         <div className="border-2 border-text w-10 mb-1 rounded-full"></div>
@@ -20,7 +24,7 @@ const Navigation = () => {
       <ul
         className={`flex flex-col md:flex-row gap-10 md:justify-end md:mx-10 mb-6 py-4 md:py-0 px-4 md:px-0 text-text font-instrument-sans ${
           isOpen
-            ? "fixed md:static top-0 left-0 w-screen h-screen md:h-full md:w-full bg-primary md:bg-transparent items-center md:items-start"
+            ? "w-screen h-screen md:h-full md:w-full bg-primary md:bg-transparent items-center md:items-start"
             : "hidden md:flex"
         }`}
       >
